@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vizkex notes</title>
+    <style>
+    *{
+      margin:0;
+      padding:0;
+      font-family: sans-serif;
+    }
+    ::selection{
+      background:#FF7842;
+      color:#FFFFFF;
+    }
+      ::-webkit-scrollbar {
+      width: 10px;
+    }
+      ::-webkit-scrollbar-track {
+      border-radius: 10px;
+      color:black;
+    }
+      ::-webkit-scrollbar-thumb {
+      background:#2B2B2B;
+      border-radius: 10px;
+    }
+    body{
+      background-color:#222222;
+      margin:0;
+      padding:0;
+      overflow-x:hidden;
+      overflow-x:hidden;
+    }
+    main{
+      display:flex;
+      flex-direction:column;
+      max-width:50%;
+      height:95vh;
+      background-color:#1E1E1E;
+      margin:0 auto;
+    }
+    h1 {
+      color:white;
+      margin: 2em 0em 1em 1.2em;
+      display:inline-block;
+      font-size:2em;
+    }
+    h1 > hr {
+      display:inline-block;
+      width:70%;
+    }
+    p {
+      color:white;
+      padding:0px 50px 0px 50px;
+    }
+    textarea {
+      outline:none;
+      border:0px;
+      padding-left:3rem;
+      padding-top:2rem;
+      background-color:#1E1E1E;
+      resize:none;
+      color:white;
+      height:100%;
+      overflow:auto;
+      font-weight:300;
+      font-size:1rem;
+    }
+    input,textarea,
+      [contenteditable] {
+      caret-color:#FF7842;
+      border:2px;
+    }
+    header{
+      background-color:#1A1A1A;
+      padding:23px;
+      width:100%;
+      position: sticky;
+      position: -webkit-stikey;
+      top:0;
+    }
+    main > input {
+      background-color:#1E1E1E;
+      outline:none;
+      padding-top:2rem;
+      padding-left:3rem;
+      font-size:20px;
+      margin-top:20px;
+      color:white;
+      font-weight:bold;
+    }
+    @media only screen and (max-width: 1200px){
+      main{
+        max-width:100%;
+      }
+    }
+    </style>
+</head>
+  <body>
+    <header>
+    </header>
+    <main>
+      <input type="text" placeholder="Titile">
+      <textarea name="markdown" id="mark" data-provide="markdown" placeholder="hello world"></textarea>
+    </main>
+</body>
+</html>
