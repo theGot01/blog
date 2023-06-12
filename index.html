@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vizkex notes</title>
-    <style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <style>
+    
     *{
       margin:0;
       padding:0;
@@ -104,7 +105,20 @@
     header > a {
       text-decoration: none;
       font-weight: bold;
-      color:#FF7842;
+      color:white;
+      font-size:20px;
+    }
+    header > nav > a > i {
+      font-size:15px;
+
+    }
+    header > nav > a {
+      padding: 10px 20px;
+      background-color:greenyellow;
+      border-radius:30px;
+    }
+    header > img {
+      height:30px;
     }
     @media only screen and (max-width: 1200px){
       .mainmarkdown{
@@ -126,9 +140,11 @@
   <body>
      <header>
       <a href="">vizkex blog</a>
-      <nav>
-      <button></button>
+      <nav class="nav">
+      <a href=""><i class="fa-solid fa-paper-plane" style="color: #000000;"></i></a>
+      
       </nav>
+      <img src="noborder.png" alt="">
     </header>
     <div class="mainmarkdown">
       <input type="text" placeholder="Titile">
