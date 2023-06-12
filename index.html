@@ -17,6 +17,11 @@
     }
       ::-webkit-scrollbar {
       width: 10px;
+      cursor: pointer;
+    }
+    ::-webkit-scrollbar:hover {
+      width: 10px;
+      cursor: pointer;
     }
       ::-webkit-scrollbar-track {
       border-radius: 10px;
@@ -30,7 +35,7 @@
       background-color:#222222;
       margin:0;
       padding:0;
-      overflow-y:hidden;
+      overflow-x:hidden;
       width:100%;
     }
     main {
@@ -63,7 +68,6 @@
       color:white;
       height:100%;
       width:100%;
-      overflow:hidden;
       font-weight:300;
       font-size:1rem;
     }
@@ -76,19 +80,20 @@
       background-color:#1E1E1E;
       outline:none;
       font-size:20px;
-      margin-top:20px;
+      margin-top:70px;
       color:white;
       font-weight:bold;
+      border-bottom: 1px solid white;
     }
     header{
-    background-color: #f0f0f0;
+    background-color:#1A1A1A;
     width: 100%;
     position: fixed;
     z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 200px ;
+    padding: 20px 200px ;
     }
     @media only screen and (max-width: 1200px){
       main{
