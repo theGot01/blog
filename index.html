@@ -10,13 +10,15 @@
       margin:0;
       padding:0;
       font-family: sans-serif;
+      box-sizing: border-box;
+      scroll-behavior: smooth; 
     }
     ::selection{
       background:#FF7842;
       color:#FFFFFF;
     }
       ::-webkit-scrollbar {
-      width: 10px;
+      width: 0px;
       cursor: pointer;
     }
     ::-webkit-scrollbar:hover {
@@ -28,23 +30,25 @@
       color:black;
     }
       ::-webkit-scrollbar-thumb {
-      background:#2B2B2B;
+      background:#1E1E1E;
       border-radius: 10px;
     }
     body{
       background-color:#222222;
       margin:0;
       padding:0;
+      overflow-y:hidden;
       overflow-x:hidden;
       width:100%;
     }
-    main {
+     .mainmarkdown {
       display:flex;
       flex-direction:column;
-      max-width:50%;
-      height:100vh;
+      max-width:45%;
+      height:99vh;
       background-color:#1E1E1E;
       margin:0 auto;
+      padding:30px 20px;
     }
     h1 {
       color:white;
@@ -70,20 +74,22 @@
       width:100%;
       font-weight:300;
       font-size:1rem;
+      padding-top: 20px;
     }
     input,textarea,
       [contenteditable] {
       caret-color:#FF7842;
       border:2px;
     }
-    main > input {
+     .mainmarkdown > input {
       background-color:#1E1E1E;
       outline:none;
       font-size:20px;
       margin-top:70px;
       color:white;
       font-weight:bold;
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid #444444;
+      width:100%;
     }
     header{
     background-color:#1A1A1A;
@@ -95,8 +101,13 @@
     align-items: center;
     padding: 20px 200px ;
     }
+    header > a {
+      text-decoration: none;
+      font-weight: bold;
+      color:#FF7842;
+    }
     @media only screen and (max-width: 1200px){
-      main{
+      .mainmarkdown{
         max-width:100%;
       }
       textarea {
@@ -114,10 +125,14 @@
 </head>
   <body>
      <header>
+      <a href="">vizkex blog</a>
+      <nav>
+      <button></button>
+      </nav>
     </header>
-    <main>
+    <div class="mainmarkdown">
       <input type="text" placeholder="Titile">
       <textarea name="markdown" id="mark" data-provide="markdown" placeholder="hello world"></textarea>
-    </main>
+    </div>
 </body>
 </html>
