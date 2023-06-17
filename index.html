@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vizkex notes</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <style>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <style> 
     *{
       margin:0;
       padding:0;
       font-family: sans-serif;
       box-sizing: border-box;
       scroll-behavior: smooth; 
+      text-decoration: none;
     }
     ::selection{
       background:#FF7842;
-      color:#FFFFFF;
+      color:black;
     }
       ::-webkit-scrollbar {
       width: 0px;
@@ -46,10 +46,10 @@
       display:flex;
       flex-direction:column;
       max-width:45%;
-      height:99vh;
+      height:100vh;
       background-color:#1E1E1E;
       margin:0 auto;
-      padding:30px 20px;
+      padding:30px 20px 0px 20px;
     }
     h1 {
       color:white;
@@ -82,28 +82,27 @@
       caret-color:#FF7842;
       border:2px;
     }
-     .mainmarkdown > input {
+     .mainmarkdown > .ti {
       background-color:#1E1E1E;
       outline:none;
       font-size:20px;
-      margin-top:70px;
+      margin-top:80px;
       color:white;
       font-weight:bold;
       border-bottom: 1px solid #444444;
       width:100%;
     }
     header{
-    background-color:#1A1A1A;
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 200px ;
+      background-color:#1A1A1A;
+      width: 100%;
+      position: fixed;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 200px ;
     }
     header > a {
-      text-decoration: none;
       font-weight: bold;
       color:white;
       font-size:20px;
@@ -112,13 +111,30 @@
       font-size:15px;
 
     }
-    header > nav > a {
-      padding: 10px 20px;
-      background-color:greenyellow;
+    header > .Publish {
+      padding: 6px 15px;
+      background-color:#323232;
       border-radius:30px;
+      font-weight:bold;
+      color:white;
+      font-size:16px;
     }
     header > nav > img {
       height:30px;
+    }
+    button{
+      padding:17px;
+      background-color:#323232;
+    }
+    .mainmarkdown > .dis {
+      background-color:#1E1E1E;
+      outline:none;
+      font-size:20px;
+      margin-top:10px;
+      color:white;
+      font-weight:bold;
+      border-bottom: 1px solid #444444;
+      width:100%;
     }
     @media only screen and (max-width: 1200px){
       .mainmarkdown{
@@ -134,24 +150,23 @@
         padding:25px 20px;
 
       }
-      header > nav a{
-        padding:8px 15px;
-      }
     }
     </style>
 </head>
   <body>
-     <header>
+       <form action="newdata.php" method="post" enctype="multipart/form-data">
+    <header>
       <a href="">vizkex blog</a>
+              <button name='upload' class="Publish">Publish</button>
       <nav class="nav">
-      <a href=""><i class="fa-solid fa-paper-plane" style="color: #000000;"></i></a>
-      <a href=""</a>
-            <img src="noborder.png" alt="">
+        <img src="noborder.png" alt="">
       </nav>
     </header>
-    <div class="mainmarkdown">
-      <input type="text" placeholder="Titile">
-      <textarea name="markdown" id="mark" data-provide="markdown" placeholder="hello world"></textarea>
-    </div>
+     <div class="mainmarkdown">
+        <input name='Title' class="ti"  type="text" placeholder="Titile">
+        <input name="Descriotion"  class="dis" type="text" placeholder="description">
+        <textarea  name='textarea' id="mark" data-provide="markdown" placeholder="hello world" markdowntext="textarea"></textarea>
+     </div>
+   </form>
 </body>
 </html>
